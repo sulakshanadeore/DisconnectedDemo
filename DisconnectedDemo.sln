@@ -22,6 +22,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperLibrary", "HelperLibr
 		{5E8D104E-87C1-427A-AFBB-3759C34C017A} = {5E8D104E-87C1-427A-AFBB-3759C34C017A}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6EDC3D42-DAB1-4E52-B5F4-89EB416276AF}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\deore\Desktop\Mphasis\27thSept_Assignment.txt = C:\Users\deore\Desktop\Mphasis\27thSept_Assignment.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

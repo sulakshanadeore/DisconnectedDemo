@@ -9,8 +9,12 @@ namespace HelperLibrary
 {
     public class EmployeeHelper
     {
-
-        EmployeeDAL dal = new EmployeeDAL();
+        EmployeeDAL dal = null;
+        public EmployeeHelper()
+        {
+            dal = new EmployeeDAL();
+        }
+        
 
         public int RowCountEmployees()
         {
