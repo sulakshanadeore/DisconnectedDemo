@@ -1,0 +1,42 @@
+﻿ Disconnected Archi, SqlDataAdaper and DataSet
+
+-------------------------------------------------
+
+
+using System.Data.SqlClient
+using System.Data
+
+
+SqlConnection
+SqlDataAdapter
+DataSet
+DataTable
+DataRow
+DataColumn
+
+1) No opening and closing the connections, its automatic.
+2) Connecting back to the database server----- SqlCommandBuilder
+-------------------------------------------------------------------
+1) Console App
+2) BAL--- Validated
+3) DAL--- Access Logic	
+4) Helper--- to have level of abstraction/hiding the code/complexity of data.
+
+
+1)compile  bll so u get bll.dll first
+2)compile dal and add reference of bll.dll
+3) compile helper and add reference dal.dll,bll.dll
+4)console app depends on bll,helper add reference of bll.dll,helper.dll
+----------------------------------------------------------------------
+Why add this?
+ ****  da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+1) Insert data into the database table, as we are in disconnected we will not be validating pk info.
+to validate pk (unique + not null) we require pk on our datatable which is in the  dataset.
+So before fill method is used for the dataset, this line of code ensures that pk constraint is applied 
+on the column in the data table.
+
+2) When updating or deleting, we want to find the record first, to find the record efficiently we use
+clustered index and clustered index is by default available on the primary key column, so that info is required for updating of deleting. The records are physically arranged in the ascending order by default on the primary key data. Find method uses it.
+3) when finding also the key info will expedite the process.find method uses it.
+--------------------------------------------------------------------
+
