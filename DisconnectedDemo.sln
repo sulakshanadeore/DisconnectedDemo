@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisconnectedDemo", "DisconnectedDemo\DisconnectedDemo.csproj", "{B85BA8D9-E4C9-477D-8C93-234CD60606E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55012304-4621-4501-9DF9-D03E091F7E77} = {55012304-4621-4501-9DF9-D03E091F7E77}
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A} = {CC209A48-FBAF-45FB-89F5-D2FDE562611A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisconnectedBLL", "DisconnectedBLL\DisconnectedBLL.csproj", "{CC209A48-FBAF-45FB-89F5-D2FDE562611A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disconnected_DAL", "Disconnected_DAL\Disconnected_DAL.csproj", "{5E8D104E-87C1-427A-AFBB-3759C34C017A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A} = {CC209A48-FBAF-45FB-89F5-D2FDE562611A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperLibrary", "HelperLibrary\HelperLibrary.csproj", "{55012304-4621-4501-9DF9-D03E091F7E77}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A} = {CC209A48-FBAF-45FB-89F5-D2FDE562611A}
+		{5E8D104E-87C1-427A-AFBB-3759C34C017A} = {5E8D104E-87C1-427A-AFBB-3759C34C017A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B85BA8D9-E4C9-477D-8C93-234CD60606E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85BA8D9-E4C9-477D-8C93-234CD60606E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85BA8D9-E4C9-477D-8C93-234CD60606E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85BA8D9-E4C9-477D-8C93-234CD60606E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC209A48-FBAF-45FB-89F5-D2FDE562611A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E8D104E-87C1-427A-AFBB-3759C34C017A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E8D104E-87C1-427A-AFBB-3759C34C017A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E8D104E-87C1-427A-AFBB-3759C34C017A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E8D104E-87C1-427A-AFBB-3759C34C017A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55012304-4621-4501-9DF9-D03E091F7E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55012304-4621-4501-9DF9-D03E091F7E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55012304-4621-4501-9DF9-D03E091F7E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55012304-4621-4501-9DF9-D03E091F7E77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F09CC14A-D3EB-4034-BF1A-19DA1A9D8992}
+	EndGlobalSection
+EndGlobal

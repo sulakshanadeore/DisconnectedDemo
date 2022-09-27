@@ -1,0 +1,66 @@
+
+alter PROCEDURE sp_ValidateUser
+	@p_userid varchar(50),
+	@p_pwd varchar(50),
+	@status bit output
+AS
+BEGIN
+	--DECLARE   @uid varchar(50), @pwd varchar(50)
+	--Select @uid=userid, @pwd=password from Users
+	--where userid=@p_userid;
+	--if @pwd=@p_pwd
+	--begin
+	--set @status=1
+	--end
+	--else
+	--begin
+	--set @status=0
+	--end
+
+
+	select @status=1 from Users
+	where userid=@p_userid Collate SQL_Latin1_General_CP1_CS_AS
+	and password=@p_pwd Collate SQL_Latin1_General_CP1_CS_AS
+
+	if @status is null 
+	begin
+	set @status=0
+	end
+	
+	
+	
+END
+GO
+--------------------------------------------------------------
+Sample data
+userid	password
+monika	monika@123
+Shital	ShitaL@123
+----------------------------------------------------------------
+
+CREATE FUNCTION fn_ValidateUser
+(
+	@p_userid varchar(50),
+	@p_pwd varchar(50)
+)
+RETURNS bit
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE  @status bit, @uid varchar(50), @pwd varchar(50)
+	Select @uid=userid, @pwd=password from Users
+	where userid=@p_userid;
+	
+	if @pwd=@p_pwd
+	begin
+	set @status=1
+	end
+	else
+	begin
+	set @status=0
+	end
+	return @status
+	
+END
+GO
+
